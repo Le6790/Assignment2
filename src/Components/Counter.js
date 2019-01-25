@@ -12,7 +12,7 @@ export default class Counter extends Component {
     render() {
         return (
             <View>
-            <Text>
+            <Text style={styles.CounterBox}>
                 {this.props.counter}
             </Text>
             </View>

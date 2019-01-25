@@ -1,9 +1,9 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
+ * Assignment 2 
+ * Kent Le A01976660
+ * 1/25/19
+ * 
+ * 
  */
 
 import React, {Component} from 'react';
@@ -23,7 +23,7 @@ export default class App extends Component{
     super(props)
 
     this.state = {
-      value: 1232
+      value: 0
     }
 
     this.nonState = 0;
@@ -37,22 +37,34 @@ export default class App extends Component{
         
         <Counter counter = {this.state.value}></Counter>
 
-        <Button title = 'increments'>
+        <Button title = 'increment'
+        //passed to the onPressed in Button
+        WhenPressed = {this.IncrementValue.bind(this)}> 
         </Button> 
 
-        <Button title ='decrements'/>
+        <Button title = 'Decrement'
+        //pass to the onPressed in Button
+        WhenPressed = {this.DecrementValue.bind(this)}>
+        </Button> 
 
       </View>
     );
   }
 
+  //Increment the value
   IncrementValue(){
-    this.setState((prevState, prop) => {
-      return {
-        value: prevState + 1
-      }
-    })
+    this.setState((prevState) => {return {
+      
+      value: prevState.value + 1
+    }},console.log("Incremented the value"));
   }
+  //Decrement the value
+  DecrementValue(){
+    this.setState((prevState) => {return {
+      value: prevState.value - 1
+    }}),console.log("Decremented the value");
+  }
+  
 }
 
 const styles = StyleSheet.create({

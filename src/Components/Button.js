@@ -11,10 +11,11 @@ export default class Button extends Component {
     render() {
         return (
             <TouchableOpacity
-                style={StyleSheet.flatten(styles.button)}
-                onPress={() => console.log('You pressed the button')}
+                style={styles.button}
+                onPress={() => this.props.WhenPressed()} //Prop to call from App.js, specifies a function, either increment or decrement
             >
                 <Text style= {styles.Button}>
+                    {/* set button title */}
                     {this.props.title}
                 </Text>
             </TouchableOpacity>
