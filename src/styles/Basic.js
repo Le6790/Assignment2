@@ -13,11 +13,12 @@ export default StyleSheet.create({
       margin: 10,
     },
     button: {
-      
+      flex:2,
+      fontFamily: "monospace",
       backgroundColor: 'lightblue',
       padding: 5,
       margin: 10,
-      width: 250,
+      width: 200,
       borderRadius:50,
       textAlign: "center",
       alignItems: "center"
@@ -31,6 +32,7 @@ export default StyleSheet.create({
       backgroundColor: 'blue'
     },
     CounterBox:{
+      fontFamily: 'monospace',
       backgroundColor:'#ef553a',
       alignItems: "center",
       textAlign: "center",
@@ -38,5 +40,11 @@ export default StyleSheet.create({
       padding:5, 
       borderRadius:10,
       fontSize:50
-  },
+    },
+    
+    Titled:{
+      fontFamily:'monospace',
+      fontSize: 20,
+    }
+  
 });

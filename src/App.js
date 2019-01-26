@@ -10,6 +10,8 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Button from './Components/Button'
 import Counter from './Components/Counter'
+import styles from './styles/Basic'
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -33,11 +35,11 @@ export default class App extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Assignment2</Text>
+        <Text style={styles.Titled}>Assignment 2</Text>
         
         <Counter counter = {this.state.value}></Counter>
 
-        <Button title = 'increment'
+        <Button title = 'Increment'
         //passed to the onPressed in Button
         WhenPressed = {this.IncrementValue.bind(this)}> 
         </Button> 
@@ -53,9 +55,9 @@ export default class App extends Component{
 
   //Increment the value
   IncrementValue(){
-    this.setState((prevState) => {return {
+    this.setState((prevStated) => {return {
       
-      value: prevState.value + 1
+      value: prevStated.value + 1
     }},console.log("Incremented the value"));
   }
   //Decrement the value
@@ -67,21 +69,4 @@ export default class App extends Component{
   
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+
